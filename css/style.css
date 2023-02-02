@@ -1,6 +1,7 @@
 /* Root */
 :root {
-    --background-color: rgb(130, 270, 220);
+    --backgroundColor: rgb(80, 220, 170);
+    --gridColor: rgb(130, 270, 220);
     --activeBoxColor: rgb(108, 218, 231);
     --borderColor: black;
     --textColor: black;
@@ -15,7 +16,7 @@ html, button, select {
 /* Body */
 body {
     margin: 0;
-    background-color: var(--background-color);
+    background-color: var(--backgroundColor);
 }
 
 /* Header */
@@ -75,7 +76,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--background-color);
+        background-color: var(--gridColor);
         transition: background-color 0.1s linear, color 0.1s linear;
         font-size: 0.8rem;    
     }
