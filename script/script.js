@@ -19,16 +19,18 @@
  * divise in 7 caselle per 7 righe;
  *****************************/ 
 
-/* Creo un elemento griglia */
+/* Griglia */
 let gridId = document.getElementById("grid")    
 
-/* Funzione per creare un div classe "box" */
-
+/* Box */
 function newBox(content) {
+    /* Funzione per creare un div classe "box" */
     let box = document.createElement('div') 
-    box.classList.add("box")
+    box.classList.add("box")    
     gridId.appendChild(box)
-    box.onclick = function(){
+
+    /* quando clicco il box faccio apparire o scomparire il suo numero */
+    box.onclick = function boxClick(){
         console.log(this.innerHTML)
         this.classList.toggle("azure")
         if (box.innerHTML == '') {
@@ -40,17 +42,21 @@ function newBox(content) {
     }
 }
 
-
+/* Funzione per creare più box in base alla dimensione della griglia */
 function multipleBoxes(template) {
     for (let i = 0; i < template; i++) {
         newBox(i + 1, i + 1)
     }
 }
 
+/* Funzione per creare la griglia quando premo il bottone */
 document.getElementById("start").onclick = function createGrid() {
-    gridId.style.cssText = ''
-    gridId.innerHTML = ''
+    gridId.style.cssText = '' /* inizializzo CSS */
+    gridId.innerHTML = ''     /* inizializzo HTML */
+    
+    /* Leggo la difficoltà selezionata e in base a quello creo il giusto numero di box */
     let level = document.getElementById("selectLevel").value 
+    
     if (level == 'easy'){
         gridId.style.cssText = 'grid-template-columns:repeat(10,1fr);grid-template-rows:repeat(10,1fr);'
         multipleBoxes(100)
