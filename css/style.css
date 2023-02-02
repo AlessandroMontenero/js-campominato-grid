@@ -1,0 +1,79 @@
+/* Root */
+:root {
+    --background-color: rgb(130, 270, 220);
+    --activeBoxColor: rgb(108, 218, 231)
+}
+
+html, button, select {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+}
+
+footer h4 {
+    font-size: 0.8rem;
+    margin: 1rem;
+}
+
+header select,
+header button {
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.grid {
+    width: 60%;
+    max-width: 500px;
+    min-width: 300px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid black;
+    display: grid;
+    cursor: crosshair;
+    
+}
+
+.box {
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    transition: background-color 0.1s linear, color 0.1s linear;
+    font-size: 1rem;    
+}
+
+.azure {
+    background: var(--activeBoxColor);
+    color: black;
+}
